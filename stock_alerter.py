@@ -22,6 +22,6 @@ if __name__ == '__main__':
     if len(stock_alerts) > 0:
         mailer.send_mail(from_address="stock_alerter@mmmtrading.com",
                         to_address=args.to_address,
-                        subject="MMM Trading Stock Alerts!!!",
+                        subject="MMM Trading Stock Alerts!!",
                         body=StockAlertFormatter().get_alerts_in_html(stock_alerts),
                         content_type="text/html")
