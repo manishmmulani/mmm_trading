@@ -1,6 +1,7 @@
 import quandl
+import os
 
-quandl.ApiConfig.api_key = 'A2cMMz72td61p4AcyMCM'
+quandl.ApiConfig.api_key = os.environ["QUANDL_API_KEY"]
 
 nse = quandl.Database('NSE')
 
