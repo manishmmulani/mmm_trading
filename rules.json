@@ -1,0 +1,12 @@
+[
+    {"symbol":"NSE/TCS", "alert_when_less_than":1500, "alert_when_greater_than":2400},
+    {"symbol":"NSE/KOTAKBANK","alert_when_less_than":1100, "alert_when_greater_than":1400},
+    {"symbol":"NSE/GRAPHITE","alert_when_less_than":700, "alert_when_greater_than":850},
+    {"symbol":"NSE/LUXIND","alert_when_less_than":1420, "alert_when_greater_than":2000},
+    {"symbol":"NSE/BRITANNIA","alert_when_less_than":2600, "alert_when_greater_than":3400},
+    {"symbol":"NSE/HEG","alert_when_less_than":3000, "alert_when_greater_than":4600},
+    {"symbol":"NSE/RELIANCE","alert_when_less_than":1200, "alert_when_greater_than":1300},
+    {"symbol":"NSE/JSWSTEEL","alert_when_less_than":270, "alert_when_greater_than":400},
+    {"symbol":"NSE/LTI","alert_when_less_than":1350, "alert_when_greater_than":1800},
+    {"symbol":"NSE/IBVENTURES","alert_when_less_than":300, "alert_when_greater_than":600}
+]

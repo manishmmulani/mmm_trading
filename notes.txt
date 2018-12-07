@@ -1,0 +1,2 @@
+https://github.com/quandl/quandl-python/blob/master/FOR_DEVELOPERS.md
+
