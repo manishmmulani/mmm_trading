@@ -11,7 +11,6 @@
     {"symbol":"NSE/IBVENTURES","alert_when_less_than":320, "alert_when_greater_than":650},
     {"symbol":"NSE/HDFCAMC","alert_when_less_than":1200, "alert_when_greater_than":1650},
     {"symbol":"NSE/DMART","alert_when_less_than":1100, "alert_when_greater_than":1750},
-    {"symbol":"NSE/M&M","alert_when_less_than":600, "alert_when_greater_than":950},
     {"symbol":"NSE/PAGEIND","alert_when_less_than":19500, "alert_when_greater_than":27500},
     {"symbol":"NSE/AXISBANK","alert_when_less_than":475, "alert_when_greater_than":750},
     {"symbol":"NSE/MARUTI","alert_when_less_than":7000, "alert_when_greater_than":9000},
