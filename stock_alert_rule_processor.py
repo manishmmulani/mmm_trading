@@ -19,9 +19,13 @@ class StockAlertRuleProcessor(object):
     def get_stock_prices(self, date):
         symbol_close_df = quandl.get(
             self.symbol_list, start_date=date, column_index="5")  # Close price
+        print(symbol_close_df)
         symbol_close_prices = map(lambda symbol: (
-            symbol, symbol_close_df[symbol + " - Close"][date]), self.symbol_list)
+            symbol, symbol_close_df[symbol + " - Close"][date] if date in symbol_close_df[symbol + " - Close"] else 0.0), self.symbol_list)
         return symbol_close_prices
+
+    def get_latest_date_with_data(self):
+        return quandl.get("NSE/TCS", rows=1).index[0].strftime("%Y-%m-%d")
 
     def get_stock_alerts(self, date):
         symbol_close_prices = dict(self.get_stock_prices(date))
@@ -45,4 +49,7 @@ if __name__ == '__main__':
     prev_day = str(datetime.date.today() - datetime.timedelta(days=1))
 
     alerter = StockAlertRuleProcessor("./rules.json")
-    print(list(alerter.get_stock_alerts(prev_day)))
+    date = alerter.get_latest_date_with_data()
+    print(date)
+    print(list(alerter.get_stock_alerts(date)))
+    

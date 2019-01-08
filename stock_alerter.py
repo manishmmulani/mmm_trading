@@ -14,9 +14,8 @@ def process_args():
 if __name__ == '__main__':
     args = process_args()
 
-    prev_day = datetime.date.today() - datetime.timedelta(days=1)
-
     stock_alert_rule_processor = StockAlertRuleProcessor(args.alert_rule_file)
+    prev_day = stock_alert_rule_processor.get_latest_date_with_data()
     stock_alerts = list(stock_alert_rule_processor.get_stock_alerts(prev_day))
     mailer = Mailer()
     if len(stock_alerts) > 0:
